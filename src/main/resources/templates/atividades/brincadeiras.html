@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadraoSite}">
+
+<section layout:fragment="conteudo">
+
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="atividades">
+  <div class="container">
+ 		<div class="row">
+	     	<nav aria-label="breadcrumb" class="col-xs-12 col-sm-12 col-md-6">
+ 				<ol class="breadcrumb nav-breadcrumb">
+    				<li class="breadcrumb-item"><a th:href="|@{/}#atividades|">Início</a></li>
+    				<li class="breadcrumb-item active" aria-current="page">Brincadeiras</li>
+  				</ol>
+			</nav>
+		</div>
+	</div>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Dicas de brincadeiras</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+    <div class="container">
+
+      <!-- Portfolio Grid Items -->
+      <div class="row">
+
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-6 col-lg-4">
+		<h4 class="text-center">Brincadeiras Diversas</h4>
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/brincadeiras.jpg" alt="">
+          </div>
+        </div>
+
+                <!-- Portfolio Item 4 -->
+        <div class="col-md-6 col-lg-4">
+    <h4 class="text-center">Brincadeiras para bebês</h4>
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/brincadeiras_bebes.jpg" alt="">
+          </div>
+        </div>
+
+                <!-- Portfolio Item 6 -->
+        <div class="col-md-6 col-lg-4">
+    <h4 class="text-center">Sites de jogos infantis</h4>
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/sites_jogos.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-6 col-lg-4">
+		<h4 class="text-center">15 brincadeiras que não exigem materiais</h4>
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/15_brincadeiras_sem_material.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-6 col-lg-4">
+		<h4 class="text-center">15 brincadeiras que será necessária alguma coisinha</h4>
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/15_brincadeiras_com_material.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- Portfolio Item 5 -->
+        <div class="col-md-6 col-lg-4">
+		<h4 class="text-center">Brinquedos que você pode fazer em casa</h4>
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+               <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/brinquedos_fazer_em_casa.jpg" alt="">
+          </div>
+        </div>
+ 
+</div>
+      <!-- /.row -->
+
+    </div>
+  </section>
+
+  <!-- Portfolio Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Brincadeiras</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+
+                <!-- Portfolio Modal - Text -->
+                <h5 class="text-uppercase mb-2">Caça ao tesouro</h5>
+                <p align="justify" class="mb-5">A caça ao tesouro pode ficar muito mais divertida de uma forma simples: com objetos sensoriais. Escolha quatro ou cinco texturas diferentes, como liso, áspero, aveludado, macio, rígido, e peça ao pequeno que corra pela casa e encontre objetos com aquelas texturas. Para os pequenos um pouco mais velhos, um cronômetro pode deixar a brincadeira mais emocionante</p>
+
+                <h5 class="text-uppercase mb-2">Stop!</h5>
+                <p align="justify" class="mb-5">Também conhecido como adedanha ou adedonha, essa brincadeira precisa de, pelo menos, três pessoas para ser bem legal. Além de ser um clássico que vai lembrar seus tempos de infância se a turma for animada, várias horas de diversão e aprendizado estão garantidas!</p>
+
+                <h5 class="text-uppercase mb-2">Massinha caseira</h5>
+                <p align="justify" class="mb-5">Brincar de massinha é sempre muito gostoso para os pequenos. Fazer a sua em casa torna a brincadeira ainda melhor. Se quiser, contamos aqui no Blog como fazer massinha caseira.</p>
+
+                <h5 class="text-uppercase mb-2">Strike!</h5>
+                <p align="justify" class="mb-5">Você vai precisar de seis a dez garrafas, rolos de cartolina ou papelão. Uma bola de meia, de tênis ou do bichinho de estimação. E pronto. É só organizar os pinos improvisados, encontrar um lugar para fazer a pista e se divertir!</p>
+
+                <h5 class="text-uppercase mb-2">Cabo de guerra em almofadas</h5>
+                <p align="justify" class="mb-5">Use alguma base arredondada e macia, como travesseiros ou almofadas. Depois, é só usar uma corda para brincar de cabo de guerra. Quem sair da base primeiro, perde.</p>
+
+                                
+                <h5 class="text-uppercase mb-2">Pista de carrinho</h5>
+                <p align="justify" class="mb-5">É bem simples: estenda o papel pelo chão da casa e prenda-o com fita adesiva, depois desenhe com giz as ruas da pista. Mas, não para por aí: pode desenhar cidades, parques, casas, etc. 
+                Esta brincadeira também tem uma outra versão que segue o mesmo raciocínio, porém usando a fita adesiva para desenhar a pista direto no chão.
+</p>
+
+                <h5 class="text-uppercase mb-2">Pintura sem sujeira</h5>
+                <p align="justify" class="mb-5">Isso parece impossível, mas não é. Compre um saquinho que possa ser lacrado (como ziploc, por exemplo). Depois, encha-o com tintas até ⅓ mais ou menos. Lacre e prenda suas laterais com fita adesiva (aconselho passar duas vezes a fita) em uma cartolina ou no chão mesmo. Assim, ao passar os dedinhos pelo lado de fora do saquinho com tinta, seu pequeno faz desenhos incríveis sem bagunça!</p>
+
+                <h5 class="text-uppercase mb-2">Telefone sem fio</h5>
+                <p align="justify" class="mb-5">Mais um clássico das brincadeiras. O telefone sem fio tradicional é feito com duas latinhas vazias e limpas, com um furo no fundo sem a tampa. Ambas conectadas por um barbante passado pelo furo. Mas você pode tentar outros materiais também.</p>
+
+                <h5 class="text-uppercase mb-2">Encaixe de formas</h5>
+                <p align="justify" class="mb-5">Desenhe quadrados, triângulos, círculos, retângulos e várias outras formas numa cartolina com canetinha ou no chão com fita adesiva. Depois, corte papéis coloridos com as mesmas formas de mesmo tamanho e dê para o seu pequeno brincar de encaixar!</p>
+
+                <h5 class="text-uppercase mb-2">Cabana</h5>
+                <p align="justify" class="mb-5">Brincar de cabana na sala é muito divertido. Para fugir das cadeiras e aquele monte de cobertores para fazer a cabaninha, use uma caixa de papelão. Ah, você pode usar os cobertores para colocar lá dentro e deixar os pequenos dormirem na cabaninha e, por que não, uma festa do pijama?</p>
+
+                 <h5 class="text-uppercase mb-2">Cantinho da leitura</h5>
+                <p align="justify" class="mb-5">O cantinho da leitura é muito parecido com a cabana, mas você precisa montá-la um pouco mais alta para conseguir entrar, além colocar almofadas para seu pequeno encostar enquanto lê.</p>
+
+                <h5 class="text-uppercase mb-2">Pintura com água</h5>
+                <p align="justify" class="mb-5">Para mudar um pouco as brincadeiras de pintar, por que não usar água? Mais uma vez, o papelão como um aliado das brincadeiras. É só separar um pote com água, um pincel e estender um papelão. Os pequenos vão adorar pintar e, depois, ver suas obras sendo absorvidas pelo papelão e gerando uma nova tela! Além de, claro, fazer muito menos bagunça do que a tinta. </p>
+
+                <h5 class="text-uppercase mb-2">Descubra a sombra</h5>
+                <p align="justify" class="mb-5">Esta brincadeira parece complicada mas é simples, divertida, toma bastante tempo e ajuda muito no raciocínio dos pequenos. Você vai precisar de: objetos variados (panelas, pratos, copos, roupas, canetas, etc.), uma luminária (ou lanterna, mas nesse caso você precisará de uma forma de mantê-la fixa), cartolina e caneta.
+				Primeiro, você empilha os objetos criando uma forma engraçada. Depois, você direciona a luz da luminária a fim de formar a sombra dos objetos empilhados no chão. A partir desse momento, não movimente mais a luz. Coloque onde se formou a sombra uma cartolina e deixe ela bem fixa no chão, use uma fita adesiva para isso. Depois da sombra projetada na cartolina, contorne-a com a caneta. Então, desmonte os objetos para desfazer a sombra ficando só com seu contorno e chame os pequenos. A brincadeira é descobrir como você empilhou os objetos para fazer o desenho na cartolina, ou seja, reproduzir a mesma sombra. Apenas fique atento para criar sombras que sejam difíceis mas não impossíveis para seu pequeno.</p>
+
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Brincadeiras para bebês</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <h5 class="text-uppercase mb-2">Caretas</h5>
+                <p align="justify" class="mb-5">Bebês adoram observar rostos e expressões. Com certeza, seu pequeno vai adorar ver sua boca, olhos e mãos em movimentos diferentes. Mesmo que ele não demonstre grandes reações, como dar risadas, ficará entretido observando.</p>
+
+                <h5 class="text-uppercase mb-2">Brincadeiras com a voz</h5>
+                <p align="justify" class="mb-5">Em alguns momentos, brinque com sua voz, fazendo vozes mais grossas e mais finas, falando mais rápido ou mais devagar e imitando sons de animais.</p>
+
+                <h5 class="text-uppercase mb-2">Rodar, pular e dançar</h5>
+                <p align="justify" class="mb-5">Segurando o bebê no colo, você pode rodar, dançar, pular e balançar o corpo. Faça isso ouvindo diferentes músicas, alternando movimentos mais lentos e mais rápidos. Seu pequeno vai adorar as sensações que esses movimentos proporcionam. Tome cuidado apenas para sempre deixar a coluna do e o pescoço do bebê apoiados em seus braços.</p>
+
+                <h5 class="text-uppercase mb-2">Esconde-esconde</h5>
+                <p align="justify" class="mb-5">Sabe a tradicional brincadeira de “Cadê? Achou!”? Pois é, ela é sempre um sucesso! Esconda seu rosto com as mãos ou com um pano e divirta o pequeno. Se o bebê não ficar irritado, você também pode brincar de esconder o rostinho dele. Além de se divertir, seu filho aprenderá que quando algo desaparece, não significa que deixa de existir.</p>
+
+                <h5 class="text-uppercase mb-2">Brincadeira com os dedos</h5>
+                <p align="justify" class="mb-5">Outra brincadeira tradicional e bem simples: finja que seus dedos são formiguinhas e vá “andando” pelo corpo do bebê. As risadinhas estão garantidas!</p>
+
+                <h5 class="text-uppercase mb-2">Pisca-pisca</h5>
+                <p align="justify" class="mb-5">Pisque seus olhos, fechando e abrindo em velocidades diferentes. Os bebês adoram ficar observando os movimentos e com o tempo tentarão imitar.</p>
+
+                <h5 class="text-uppercase mb-2">Rolar</h5>
+                <p align="justify" class="mb-5">Deite ao lado do bebê na cama ou em um edredom e estimule os movimentos, rolando seu corpinho ou colocando ele de bruços. Aperte o colchão para seu corpo dar pulinhos, como se estivesse em uma cama elástica. Ele vai adorar!</p>
+
+                <h5 class="text-uppercase mb-2">Teatro dos fantoches</h5>
+                <p align="justify" class="mb-5">Use fantoches ou, até mesmo, os brinquedos do pequeno para conversar, cantar e interagir com ele. Os bebês se divertem observando os brinquedos criarem vida.</p>
+
+                <h5 class="text-uppercase mb-2">Mímica</h5>
+                <p align="justify" class="mb-5">Fazer mímicas é outra forma divertida de interação. O bebê vai achar engraçado ver os pais se movendo de forma diferente.</p>
+
+                <h5 class="text-uppercase mb-2">Histórias</h5>
+                <p align="justify" class="mb-5">Faça caretas e vozes diferentes, conforme narra as histórias para seu pequeno. Folhear livros infantis com ilustrações grandes e bonitas também vai diverti-lo, além de estimular o hábito da leitura e reforçar o vínculo entre vocês. “Deixar que ele manuseie o livro, com sua supervisão, também pode ser uma ótima brincadeira além de um grande estímulo tátil”, afirma Sarah Helena, psicóloga.Ler histórias para dormir aumenta o vínculo entre você e seu bebê.</p>
+
+                <h5 class="text-uppercase mb-2">Cabanas e túneis</h5>
+                <p align="justify" class="mb-5">Quando aprender a engatinhar, o bebê começará a explorar a casa e os móveis se transformarão em brinquedos. Participe da brincadeira montando cabaninhas e túneis para vocês entrarem e passarem por baixo. Lençóis, cobertas, cadeiras e sofás vão ajudar!</p>
+
+                <h5 class="text-uppercase mb-2">Caça ao brinquedo</h5>
+                <p align="justify" class="mb-5">Essa é uma brincadeira que além de divertida, colabora para fortalecer os músculos da perna do pequeno. Coloque o bebê sentado em uma extremidade do sofá e fique com o brinquedo na outra, para que ele tente pegá-lo. Se o bebê estiver no chão, tentará alcançar você e o brinquedo subindo no sofá.</p>
+
+                 <h5 class="text-uppercase mb-2">Obstáculos</h5>
+                <p align="justify" class="mb-5">Coloque almofadas e travesseiros em cima de um edredom e deixe seu bebê rolar para lá e pra cá, explorando as alturas e os obstáculos que os objetos proporcionam. Prefira fazer isso no chão — e não em cima da cama —, para que você possa brincar mais relaxada, sem se preocupar com que o bebê caia.</p>
+
+                <h5 class="text-uppercase mb-2">Serra, serra, serrador...</h5>
+                <p align="justify" class="mb-5">Invista em todas as brincadeiras que seus pais faziam com você quando criança! Lembra do “serra, serra, serrador…”? Essa em particular, devido aos movimentos e à canção, é uma das preferidas dos pequenos!</p>
+
+                <h5 class="text-uppercase mb-2">Bolhas de sabão</h5>
+                <p align="justify" class="mb-5">As crianças ficam fascinadas com bolinhas de sabão, por isso é uma ótima maneira de brincar com elas. Vá fazendo as bolinhas próximo ao seu filho para que ele possa se movimentar para pegá-las.</p>
+
+                <h5 class="text-uppercase mb-2">Cantigas e músicas</h5>
+                <p align="justify" class="mb-5">Aproveite as primeiras palavras do pequeno para estimular a musicalização, cantando cantigas de roda com melodias e letras fáceis de decorar.</p>
+
+                <h5 class="text-uppercase mb-2">Carimbos com tinta</h5>
+                <p align="justify" class="mb-5">Coloque papel no chão, pinte os pézinhos e mãozinhas do pequeno e deixe que ele carimbe os papéis. Além de divertido, essa atividade rende belas recordações! A psicóloga Sarah também dá uma dica atóxica: use beterrabas e cenouras raladas e deixe que seu bebê os explore à vontade! Se levar à boca, melhor ainda!</p>
+
+                <h5 class="text-uppercase mb-2">Gangorra</h5>
+                <p align="justify" class="mb-5">Deite-se no chão ou no sofá, flexione as pernas e coloque o pequeno em cima, fazendo movimentos de gangorra. O friozinho na barriga será o máximo para ele.</p>
+
+                <h5 class="text-uppercase mb-2">Riscos e rabiscos</h5>
+                <p align="justify" class="mb-5">Libere tintas e pincéis e deixe seu filho pintar você! Sim, costas, braços e pernas podem ser ótimos lugares para os rabiscos infantis. Apenas garanta que o material usado saia facilmente com água e sabão. Ah, e não se esqueça de tirar fotos para o álbum da família!</p>
+
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Sites com jogos infantis</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <h5 class="text-uppercase mb-2">Jogos educativos de alfabetização, leitura e matemática</h5>
+                <p align="justify" class="mb-3 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="https://profrafaelak.blogspot.com/2019/05/jogos-educativos-onlines.html">Clique aqui para acessar!</a> </p>
+
+                <h5 class="text-uppercase mb-2">Jogos matemáticos para diversas idades</h5>
+                <p align="justify" class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="https://br.ixl.com/?partner=google&campaign=1454064654&adGroup=56274147813&gclid=Cj0KCQjwpfHzBRCiARIsAHHzyZrN87NzQH2mAs1P4Tu--5lRwTYKysI7cV6oAD5SdRPeyDaDu_2RkTMaAnH-EALw_wcB">Matemática IXL</a> </p>
+
+                <p align="justify" class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="http://www.turmadogrubbi.com.br/">Turma do Grubbi</a> </p>
+                
+                <p align="justify" class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="https://www.smartkids.com.br/jogos-educativos">Smart Kids</a> </p>
+                
+                <p align="justify" class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="https://www.acorujaboo.com/">A coruja Boo</a> </p>
+
+                <p align="justify" class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="https://www.divertudo.com.br/">Divertudo</a> </p>
+
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">15 brincadeiras que não exigem materiais.</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <h6 class="text-uppercase mb-4">Isso mesmo, separamos 15 brincadeiras simples para fazer a qualquer hora e só com o corpo, sem precisar de material nenhum, para você se esbaldar com as crianças!</h6>
+                <p class="mb-2 text-center">• Adoleta</p>
+                <p class="mb-2 text-center">• Bate mão</p>
+                <p class="mb-2 text-center">• Jokempô</p>
+                <p class="mb-2 text-center">• Ninja-ho</p>
+                <p class="mb-2 text-center">• Trava-língua</p>
+                <p class="mb-2 text-center">• Mímica</p>
+                <p class="mb-2 text-center">• Andar sobre os pés</p>
+                <p class="mb-2 text-center">• Desenho no vapor do box</p>
+                <p class="mb-2 text-center">• Ciranda dos animais</p>
+                <p class="mb-2 text-center">• Cantar</p>
+                <p class="mb-2 text-center">• Serra-serra na perna</p>
+                <p class="mb-2 text-center">• Cavalinho</p>
+                <p class="mb-2 text-center">• ABC de mãos</p>
+                <p class="mb-2 text-center">• Perguntas e pegadinhas de raciocínio</p>
+                <p class="mb-2 text-center">• Morto Vivo(diferente)</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">15 Brincadeiras em que vai ser necessária alguma coisinha</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+               <p align="justify" class="text-uppercase mb-4"><strong>Primeiro, pense em materiais bem simples. Então, dê uma olhada aqui na nossa lista com mais 15 brincadeiras simples para fazer a qualquer hora e super divertidas para você fazer com as crianças.</strong></p>
+
+				      <p class="mb-2">• Complete o desenho</p>
+              <p class="mb-2">• Pular elástico</p>
+              <p class="mb-2">• Fazer bolha de sabão</p>
+              <p class="mb-2">• Pular corda</p>
+              <p class="mb-2">• Flutua ou afunda</p>
+              <p class="mb-2">• Amarelinha de folhas</p>
+              <p class="mb-2">• Pintura com água</p>
+              <p class="mb-2">• Gol de dedos</p>
+              <p class="mb-2">• Passe o anel</p>
+              <p class="mb-2">• Cama de gato</p>
+              <p class="mb-2">• Jogar bola</p>
+              <p class="mb-2">• Brincar de pegadas</p>
+              <p class="mb-2">• Colorir</p>
+              <p class="mb-2">• Sequencia de lego</p>
+              <p class="mb-2">• Jogar bexiga</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 6 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Brinquedos que você pode fazer em casa</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <h5 class="text-uppercase mb-2">32 ideias de brinquedos para educação infantil</h5>
+                <h2 class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="https://www.revistaartesanato.com.br/brinquedos-reciclados-educacao-infantil/">Revista Artesanato</a> </h2>
+
+                <h3 class="text-uppercase mb-3">Monstrinhos de bexiga</h3>
+                <div class="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/gdrMwkFo6Ao" frameborder="0" allowfullscreen>
+                </iframe></div>
+                <p class="mb-3"></p>
+                <h3 class="text-uppercase mb-3">Massinha de modelar caseira</h3>
+                <div class="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/pgc5yMjq6Hg" frameborder="0" allowfullscreen>
+                </iframe></div>
+                <p class="mb-3"></p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Portfolio Modal 7 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-labelledby="portfolioModal7Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Vacina e tratamento</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-3">Ainda não há vacina disponível para o corona nem medicamento específico para seu tratamento. 
+				O principal para os casos leves é o tratamento sintomático e cuidados gerais como hidratação, alimentação equilibrada e repouso. 
+				Para os casos graves, o suporte respiratório em centro de referência é a medida mais adequada.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Portfolio Modal 8 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-labelledby="portfolioModal8Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Posso viajar?</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-3">Avalie com cautela a real necessidade da viagem, mesmo que você não esteja no grupo de risco para os casos mais graves.
+Ao viajar, seu risco de contágio aumenta, dificultando o controle da doença.</p>
+<p class="mb-3">Além disso, se for infectado, você pode passar a doença para amigos e familiares que estejam no grupo de risco.
+Caso a viagem seja imprescindível, tome todas as precauções orientadas e pratique a etiqueta respiratória.
+Ao voltar, preste muita atenção em sintomas por 14 dias e avalie aqui se seu caso pode ser grave ou não.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Portfolio Modal 8 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-labelledby="portfolioModal9Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Fake news?</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-3">Você pode fazer uma denúncia para a ouvidoria pelo WhatsApp, no número
+				<a class="nav-link " href="http://api.whatsapp.com/send?1=pt_BR&phone=554436429958"><i class="fab fa-whatsapp"></i>(44) 3642-9958</a> 
+				ou ligando para o 156. A ligação é gratuita.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</html>

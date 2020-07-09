@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadraoSite}">
+
+<section layout:fragment="conteudo">
+	<section class="page-section portfolio" id="aulas">
+	<div class="container">
+ 		<div class="row">
+	     	<nav aria-label="breadcrumb" class="col-xs-12 col-sm-12 col-md-6">
+ 				<ol class="breadcrumb nav-breadcrumb">
+    				<li class="breadcrumb-item"><a th:href="@{/}">Início</a></li>
+    				<li class="breadcrumb-item"><a th:href="|@{/semanasLiberadas/{codigoSerie}(codigoSerie=${aula.serie.codigo})}#semanas|">Semanas</a></li>
+    				<li class="breadcrumb-item"><a th:href="|@{/aulasOnline/{codigoSerie}/{codigoSemana}(codigoSerie=${aula.serie.codigo},codigoSemana=${aula.semana.codigo})}#aulas|">Aulas</a></li>
+    				<li class="breadcrumb-item active" aria-current="page">Aula</li>
+  				</ol>
+			</nav>
+		</div>
+	</div>
+		<!-- Portfolio Section Heading -->
+		<h2	class="page-section-heading text-center text-uppercase text-secondary mb-4"
+			th:text="|${aula.serie.nome} - ${aula.materia.nome}|"></h2>
+		<h4	class="text-center text-uppercase text-secondary mb-0"
+			th:text="${aula.semana.semanaFormadata()}"></h4>
+
+		<!-- Icon Divider -->
+		<div class="divider-custom">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon">
+				<i class="fas fa-star"></i>
+			</div>
+			<div class="divider-custom-line"></div>
+		</div>
+		<div class="container">
+			<div class="row mb-1">
+				<div class="col-md-12 col-lg-12">
+					<h4 class="text-uppercase mb-3">Objetos do conhecimento</h4>
+					<div class="col-md-12 col-lg-12 text-justify" th:utext="${aula.objetosConhecimentoHtml}"></div>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-md-12 col-lg-12">
+					<h4 class="text-uppercase mb-3">Objetivos de aprendizagem</h4>
+					<div class="col-md-12 col-lg-12 text-justify" th:utext="${aula.objetivosAprendizagemHtml}"></div>
+				</div>
+			</div>
+
+			<div class="row mb-5">
+				<div class="col-md-12 col-lg-12">
+					<h2 class="text-uppercase mb-3 text-center">Assista a videoaula
+						abaixo</h2>
+					<div class="video-container">
+						<iframe width="853" height="480"
+							th:src="|https://www.youtube.com/embed/${aula.urlVideoAula1}|"
+							frameborder="0" allowfullscreen> </iframe>
+					</div>
+				</div>
+			</div>
+			<div class="row" th:if="${aula.temVideo2()}">
+				<div class="col-md-12 col-lg-12">
+					<h2 class="text-uppercase mb-3 text-center">Vídeo 2</h2>
+					<div class="video-container">
+						<iframe width="853" height="480"
+							th:src="|https://www.youtube.com/embed/${aula.urlVideoAula2}|"
+							frameborder="0" allowfullscreen> </iframe>
+					</div>
+				</div>
+			</div>
+			<!-- Icon Divider -->
+			<div class="divider-custom">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="divider-custom-line"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<h4 class="text-uppercase mb-3">Referências Bibliográficas</h4>
+					<div class="col-md-12 col-lg-12 text-justify" th:utext="${aula.referenciaBibliograficasHtml}"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+</html>

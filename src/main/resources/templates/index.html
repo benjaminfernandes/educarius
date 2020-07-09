@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadraoSite}">
+
+<section layout:fragment="conteudo">
+	<section class="page-section portfolio" id="aulas">
+		<!-- Portfolio Section Heading -->
+		<h2
+			class="page-section-heading text-center text-uppercase text-secondary mb-0">Aulas
+			Online</h2>
+
+		<!-- Icon Divider -->
+		<div class="divider-custom">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon">
+				<i class="fas fa-star"></i>
+			</div>
+			<div class="divider-custom-line"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"
+					th:each="serie : ${series}">
+					<div class="portfolio-item mx-auto">
+						<a
+							th:href="|@{/semanasLiberadas/{codigo}(codigo=${serie.codigo})}#semanas|">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div
+									class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+						</a> <img class="img-fluid"
+							th:src="@{/img/{image}(image=${serie.nomeFoto})}" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="copyright py-4 text-center text-white">
+		<div class="container">
+			<h1 class="text-center text-white">Outras Atividades</h1>
+		</div>
+	</section>
+
+	<!-- Portfolio Section -->
+	<section class="page-section portfolio" id="atividades">
+		<div class="container">
+			<!-- Portfolio Grid Items -->
+			<div class="row">
+
+				<div class="col-md-6 col-lg-6">
+					<h4 class="text-center">Educação Infantil</h4>
+					<div class="portfolio-item mx-auto">
+						<a th:href="@{/educacaoInfantil}">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div
+									class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+						</a> <img class="img-fluid" src="img/educacao_infantil2.jpg" alt="">
+					</div>
+				</div>
+
+				<!-- Portfolio Item 4 -->
+				<div class="col-md-6 col-lg-6">
+					<h5 class="text-center">Atividades para imprimir - Educação
+						Infantil</h5>
+					<div class="portfolio-item mx-auto" data-toggle="modal"
+						data-target="#portfolioModal3">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div
+								class="portfolio-item-caption-content text-center text-white">
+								<i class="fas fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="img/educacao_infantil.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-6">
+					<h4 class="text-center">Atividades com músicas para Educação
+						Infantil de acordo com a BNCC</h4>
+					<div class="portfolio-item mx-auto">
+						<a th:href="@{/atividadesBncc}">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div
+									class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+						</a> <img class="img-fluid" src="img/atividades_musica.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-6">
+					<h4 class="text-center">Vídeos que auxiliam no aprendizado do
+						conteúdo</h4>
+					<div class="portfolio-item mx-auto">
+						<a th:href="@{/videos}">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div
+									class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+						</a> <img class="img-fluid" src="img/atividades_videos.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-6">
+					<h4 class="text-center">Educação Especial Inclusiva</h4>
+					<div class="portfolio-item mx-auto">
+						<a th:href="@{/inclusao}">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div
+									class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+						</a> <img class="img-fluid" src="img/educacao_especial.jpg" alt="">
+					</div>
+				</div>
+
+				<!-- Portfolio Item 3 -->
+				<div class="col-md-6 col-lg-6">
+					<h5 class="text-center">Atividades disponíveis para download
+						(1º ao 5° Ano)</h5>
+					<div class="portfolio-item mx-auto" data-toggle="modal"
+						data-target="#portfolioModal2">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div
+								class="portfolio-item-caption-content text-center text-white">
+								<i class="fas fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="img/atividades_1_5_ano.jpg" alt="">
+					</div>
+				</div>
+
+				<!-- Portfolio Item 1 -->
+				<div class="col-md-6 col-lg-6">
+					<h4 class="text-center">Brincadeiras</h4>
+					<div class="portfolio-item mx-auto">
+						<a th:href="@{/brincadeiras}">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div
+									class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+						</a> <img class="img-fluid" src="img/brincadeiras.jpg" alt="">
+					</div>
+				</div>
+
+				<!-- Portfolio Item 2 -->
+				<div class="col-md-6 col-lg-6">
+					<h4 class="text-center">Livros Online</h4>
+					<div class="portfolio-item mx-auto" data-toggle="modal"
+						data-target="#portfolioModal1">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div
+								class="portfolio-item-caption-content text-center text-white">
+								<i class="fas fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="img/livros_online.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-6">
+					<h4 class="text-center">Dica de rotina semanal</h4>
+					<div class="portfolio-item mx-auto">
+						<a th:href="@{/rotinas}">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div
+									class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+						</a> <img class="img-fluid" src="img/rotinas.jpg" alt="">
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Portfolio Modal 1 -->
+	<div class="portfolio-modal modal fade" id="portfolioModal1"
+		tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true"> <i class="fas fa-times"></i>
+					</span>
+				</button>
+				<div class="modal-body text-center">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title -->
+								<h2
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Sites
+									para leituras</h2>
+								<!-- Icon Divider -->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+
+								<h5 align="justify" class="text-secondary text-uppercase mb-3">LER
+									É IMPORTANTE! ESTIMULA A IMAGINAÇÃO, AMPLIA O VOCABULÁRIO,
+									DISTRAI E NOS POSSIBILITA CONHECER UM MUNDO NOVO EM CADA
+									PÁGINA. Clique nos links abaixo para acessar os livros</h5>
+
+								<!-- Portfolio Modal - Text -->
+
+								<h2 class="mb-2 text-center">
+									<a class="nav-link rounded js-scroll-trigger" target="_blank"
+										href="https://oincrivelze.com.br/2016/06/livros-infantis-gratuitos-2/">93
+										livros infantis</a>
+								</h2>
+
+								<h2 class="mb-2 text-center">
+									<a class="nav-link rounded js-scroll-trigger" target="_blank"
+										href="https://onlinecursosgratuitos.com/22-livros-de-literatura-infantil-para-baixar-em-pdf-dominio-publico/">22
+										livros de literatura infantil</a>
+								</h2>
+
+								<button class="btn btn-primary" href="#" data-dismiss="modal">
+									<i class="fas fa-times fa-fw"></i> Fechar
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Portfolio Modal 2 -->
+	<div class="portfolio-modal modal fade" id="portfolioModal2"
+		tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true"> <i class="fas fa-times"></i>
+					</span>
+				</button>
+				<div class="modal-body text-center">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title -->
+								<h2
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">ATIVIDADES
+									DE REFORÇO DISPONÍVEIS PARA DOWNLOAD (1º AO 5º ANO):</h2>
+								<!-- Icon Divider -->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+								<!-- Portfolio Modal - Text -->
+								<p class="mb-3"></p>
+
+								<h2 class="mb-2 text-center">
+									<a class="nav-link rounded js-scroll-trigger" target="_blank"
+										href="arquivos/reforco_1_ano.pdf">1° Ano</a>
+								</h2>
+
+								<h2 class="mb-2 text-center">
+									<a class="nav-link rounded js-scroll-trigger" target="_blank"
+										href="arquivos/reforco_2_ano.pdf">2° Ano</a>
+								</h2>
+
+								<h2 class="mb-2 text-center">
+									<a class="nav-link rounded js-scroll-trigger" target="_blank"
+										href="arquivos/reforco_3_ano.pdf">3° Ano</a>
+								</h2>
+
+								<h2 class="mb-2 text-center">
+									<a class="nav-link rounded js-scroll-trigger" target="_blank"
+										href="arquivos/reforco_4_ano.pdf">4° Ano</a>
+								</h2>
+
+								<h2 class="mb-2 text-center">
+									<a class="nav-link rounded js-scroll-trigger" target="_blank"
+										href="arquivos/reforco_5_ano.pdf">5° Ano</a>
+								</h2>
+								<button class="btn btn-primary" href="#" data-dismiss="modal">
+									<i class="fas fa-times fa-fw"></i> Fechar
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Portfolio Modal 3 -->
+	<div class="portfolio-modal modal fade" id="portfolioModal3"
+		tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true"> <i class="fas fa-times"></i>
+					</span>
+				</button>
+				<div class="modal-body text-center">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title -->
+								<h2
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Atividades
+									para imprimir - Educação Infantil</h2>
+								<!-- Icon Divider -->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+								<!-- Portfolio Modal - Text -->
+								<h2 class="mb-2 text-center">
+									<a class="nav-link rounded js-scroll-trigger" target="_blank"
+										href="arquivos/educacao_infantil.pdf">Clique aqui para
+										baixar!</a>
+								</h2>
+
+								<button class="btn btn-primary" href="#" data-dismiss="modal">
+									<i class="fas fa-times fa-fw"></i> Fechar
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</html>

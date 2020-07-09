@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:portal="http://ti.guaira.pr.gov.br">
+	
+<body>
+<aside class="aw-layout-sidebar  js-sidebar" th:fragment="layout-sidebar">
+	<div class="aw-layout-sidebar__content">
+
+    	<nav class="aw-menu  js-menu">
+      		<ul class="aw-menu__list">
+
+        		<li class="aw-menu__item" portal:menu="@{/}">
+          			<a th:href="@{/}"><i class="fa  fa-fw  fa-home"></i><span>Dashboard</span></a>
+        		</li>
+        		
+        		<li class="aw-menu__item">
+          			<a href="#">
+            			<i class="fa  fa-fw  fa-database"></i><span>Cadastros</span>
+            			<i class="aw-menu__navigation-icon  fa"></i>
+          			</a>
+
+          			<ul class="aw-menu__list  aw-menu__list--sublist">
+			            <li class="aw-menu__item  aw-menu__item--link" portal:menu="@{/materias.*}">
+			            	<a th:href="@{/materias}">Matérias</a>
+			            </li>
+			            <li class="aw-menu__item  aw-menu__item--link" portal:menu="@{/series.*}">
+			            	<a th:href="@{/series}">Séries</a>
+			            </li>
+			            <li class="aw-menu__item  aw-menu__item--link" portal:menu="@{/semanas.*}">
+			            	<a th:href="@{/semanas}">Semanas</a>
+			            </li>
+          			</ul>
+        		</li>
+        		
+        		<li class="aw-menu__item">
+          			<a href="#">
+            			<i class="fa  fa-fw  fa-book"></i><span>Aulas</span>
+            			<i class="aw-menu__navigation-icon  fa"></i>
+          			</a>
+
+          			<ul class="aw-menu__list  aw-menu__list--sublist">
+			            <li class="aw-menu__item  aw-menu__item--link" portal:menu="@{/aulas/nova}">
+			            	<a th:href="@{/aulas/nova}">Lançar</a>
+			            </li>
+			            <li class="aw-menu__item  aw-menu__item--link" portal:menu="@{/aulas.*}">
+			            	<a th:href="@{/aulas}">Pesquisar</a>
+			            </li>
+          			</ul>
+        		</li>
+
+        		<li class="aw-menu__item">
+          			<a href="#">
+            			<i class="fa  fa-fw  fa-user"></i><span>Usuário</span>
+            			<i class="aw-menu__navigation-icon  fa"></i>
+          			</a>
+
+          			<ul class="aw-menu__list  aw-menu__list--sublist">
+			            <li class="aw-menu__item  aw-menu__item--link" portal:menu="@{/usuarios.*}">
+			            	<a th:href="@{/usuarios}">Pesquisar</a>
+			            </li>
+			            <li class="aw-menu__item  aw-menu__item--link" portal:menu="@{/usuarios.*}">
+			            	<a th:href="@{/usuarios/novo}">Cadastrar</a>
+			            </li>
+          			</ul>
+        		</li>
+      		</ul>
+    	</nav>
+	</div>
+</aside>
+</body>
+</html>

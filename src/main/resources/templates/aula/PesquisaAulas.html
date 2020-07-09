@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadrao}"
+	xmlns:plano="http://ti.guaira.pr.gov.br"
+	xmlns:data="http://www.thymeleaf.org/extras/data">
+	
+	
+<head>
+<title>Pesquisa de aulas</title>
+</head>
+<section layout:fragment="conteudo">
+	<div class="page-header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-10">
+					<h1>Pesquisa de aulas</h1>
+				</div>
+				<div class="col-xs-2">
+					<div class="aw-page-header-controls">
+						<a class="btn btn-default" th:href="@{/aulas/nova}"> <i
+							class="glyphicon  glyphicon-plus-sign"></i> <span
+							class="hidden-xs  hidden-sm">Nova</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<form method="GET" th:object="${aulaFilter}">
+			<div class="row">
+				<div class="col-sm-12  form-group">
+					<label for="semana" class="control-label">Semana</label> 
+					<div class="bw-field-action">
+						<select id="semana" class="form-control" th:field="*{semana}">
+							<option value="">Selecione a semana</option>
+							<option th:each="semana : ${semanas}"
+								th:value="${semana.codigo}" th:text="${semana.semanaFormadata()}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="col-sm-6  form-group">
+					<label for="serie" class="control-label">Série</label>
+					<div class="bw-field-action">
+						<select id="serie" class="form-control" th:field="*{serie}">
+							<option value="">Selecione a série</option>
+							<option th:each="serie : ${series}" th:value="${serie.codigo}"
+								th:text="${serie.nome}"></option>
+						</select>
+					</div>
+				</div>
+					<div class="col-sm-6  form-group">
+					<label for="materia" class="control-label">Matéria</label>
+					<div class="bw-field-action">
+						<select id="materia" class="form-control" th:field="*{materia}">
+							<option value="">Selecione a matéria</option>
+							<option th:each="materia : ${materias}"
+								th:value="${materia.codigo}" th:text="${materia.nome}"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			
+			<button type="submit" class="btn  btn-primary">Pesquisar</button>
+		</form>
+		<div class="table-responsive  py-tabela-simples">
+			<table class="table  table-hover">
+				<thead>
+					<tr>
+						<th>
+							<plano:order page="${pagina}" field="serie" text="Série"/>
+						</th>
+						<th>
+							<plano:order page="${pagina}" field="materia" text="Matéria"/>
+						</th>
+						<th class="table-hospedagem-col-acoes  text-center">Ações</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="aula : ${pagina.conteudo}">
+					
+						<td th:text="${aula.serie.nome}"></td>
+						<td th:text="${aula.materia.nome}"></td>
+						<td class="text-center">
+							<a class="btn  btn-link  btn-xs  js-tooltip" title="Editar" 
+							 th:href="@{/aulas/{codigo}(codigo=${aula.codigo})}"> 
+								<i class="glyphicon glyphicon-pencil"></i>
+							</a>
+							<a class="btn  btn-link  btn-xs  js-tooltip  js-exclusao-btn" title="Excluir" href="#"
+							th:attr="data-codigo=${aula.codigo}, data-url=@{/aulas/{codigo}(codigo=${aula.codigo})}, 
+							data-objeto=|${aula.materia.nome} do ${aula.serie.nome} do período ${aula.semana.semanaFormadata()}|">
+								<i class="glyphicon glyphicon-remove"></i>
+							</a>
+						</td>
+					</tr>
+
+				<tr th:if="${pagina.vazia}">
+						<td colspan="4">Nenhuma aula encontrada</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<plano:pagination page="${pagina}"/>
+		
+	</div>
+</section>
+</html>

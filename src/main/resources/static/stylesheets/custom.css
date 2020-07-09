@@ -1,0 +1,40 @@
+
+
+body .feature-box-icon{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+.fa{
+	font-size: 25px;
+}
+
+
+.logo-principal > a > img{
+	height: 60px;
+	width: 150px;
+}
+
+.icons {
+	font-size: 2em; 
+	color: Tomato;
+}
+
+.address-onde-dormir{
+	margin-right: 10px;
+}
+
+.email-onde-dormir{
+	margin-right: 10px;
+}
+
+.telefone-onde-dormir{
+	margin-right: 4px;
+}
+
+.site-onde-dormir{
+	margin-right: 1px;
+}
+

@@ -1,0 +1,51 @@
+/* Upload */
+.py-upload {
+	padding: 15px;
+	border: 1px dashed #ddd;
+	border-radius: 4px;
+	background: #fafafa;
+	text-align: center;
+}
+
+.py-upload-form-file {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1px;
+}
+
+.py-upload-form-file>input[type=file] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+	font-size: 500px;
+}
+
+
+/* Tabela Simples */
+.py-tabela-simples {
+    margin-top: 15px;
+}
+
+.py-tabela-simples table tr th {
+    border-bottom-width: 1px;
+}
+
+.py-tabela-simples table tr td {
+    border-top: none;
+    border-bottom: 1px solid #e7eaec;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* Colunas - Pesquisa de Hospedagens */
+.table-hospedagem-col-foto {
+    min-width: 50px;
+    width: 50px
+}
+

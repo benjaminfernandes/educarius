@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadraoSite}"
+	xmlns:plano="http://ti.guaira.pr.gov.br">
+
+<section layout:fragment="conteudo">
+
+  <section class="page-section portfolio" id="semanas">
+ 	<div class="container">
+ 		<div class="row">
+	     	<nav aria-label="breadcrumb" class="col-xs-12 col-sm-12 col-md-6">
+ 				<ol class="breadcrumb nav-breadcrumb">
+    				<li class="breadcrumb-item"><a th:href="@{/}">Início</a></li>
+    				<li class="breadcrumb-item active" aria-current="page">Semanas</li>
+  				</ol>
+			</nav>
+		</div>
+	</div>
+ <!-- Portfolio Section Heading -->
+      <h2 class="text-center text-uppercase text-secondary mb-4">Clique na semana desejada e bons estudos</h2>
+
+      <div class="container">
+      	<div class="row">
+      		<div class="col-md-6 col-lg-4" th:each="semana : ${semanas}">
+         		<div class="portfolio-item mx-auto">
+            		<a th:href="|@{/aulasOnline/{codigoSerie}/{codigoSemana}(codigoSerie=${serie}, codigoSemana=${semana.codigo})}#aulas|">
+           	 			<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              				<div class="portfolio-item-caption-content text-center text-white">
+              				<i class="fas fa-plus fa-3x"></i>
+              				</div>             
+            			</div>
+           		 	</a>
+           		 <div class="text-center  box-semana">
+           		 <i class="fas fa-book fa-2x" style="margin-top: 15px"></i>
+           		 		<h5 style="margin-top: 25px" th:text="${semana.semanaFormadata()}">Teste</h5>
+           		</div>	
+          </div>
+        </div> 
+      	</div>
+      </div>
+      
+	</section>
+</section>
+
+</html>

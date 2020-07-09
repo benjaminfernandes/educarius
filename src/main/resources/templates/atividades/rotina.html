@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadraoSite}">
+
+<section layout:fragment="conteudo">
+  
+  <section class="page-section portfolio" id="plano">
+  <div class="container">
+ 		<div class="row">
+	     	<nav aria-label="breadcrumb" class="col-xs-12 col-sm-12 col-md-6">
+ 				<ol class="breadcrumb nav-breadcrumb">
+    				<li class="breadcrumb-item"><a th:href="|@{/}#atividades|">Início</a></li>
+    				<li class="breadcrumb-item active" aria-current="page">Rotina</li>
+  				</ol>
+			</nav>
+		</div>
+	</div>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Rotina Semanal</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-6 col-lg-6">
+         <div class="portfolio-item mx-auto">
+            <a th:href="|@{/segunda}#atividades|">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+              <i class="fas fa-plus fa-3x"></i>
+              </div>             
+            </div>
+            </a>
+            <img class="img-fluid" th:src="@{/img/SEGUNDA.jpg}" alt="">
+          </div>
+        </div> 
+
+      <div class="col-md-6 col-lg-6">
+         <div class="portfolio-item mx-auto">
+            <a th:href="|@{/terca}#atividades|">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+              <i class="fas fa-plus fa-3x"></i>
+              </div>             
+            </div>
+            </a>
+            <img class="img-fluid" src="img/TERCA.jpg" alt="">
+          </div>
+        </div>
+        
+           <div class="col-md-6 col-lg-6">
+            <div class="portfolio-item mx-auto">
+            <a th:href="|@{/quarta}#atividades|">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+              <i class="fas fa-plus fa-3x"></i>
+              </div>             
+            </div>
+            </a>
+            <img class="img-fluid" src="img/QUARTA.jpg" alt="">
+          </div>
+        </div>
+        
+      <div class="col-md-6 col-lg-6">
+         <div class="portfolio-item mx-auto">
+            <a th:href="|@{/quinta}#atividades|">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+              <i class="fas fa-plus fa-3x"></i>
+              </div>             
+            </div>
+            </a>
+            <img class="img-fluid" src="img/QUINTA.jpg" alt="">
+          </div>
+        </div>
+        
+      <div class="col-md-6 col-lg-6">
+         <div class="portfolio-item mx-auto">
+            <a th:href="|@{/sexta}#atividades|">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+              <i class="fas fa-plus fa-3x"></i>
+              </div>             
+            </div>
+            </a>
+            <img class="img-fluid" src="img/SEXTA.jpg" alt="">
+          </div>
+        </div>
+        
+      <div class="col-md-6 col-lg-6">
+         <div class="portfolio-item mx-auto">
+            <a th:href="|@{/sabado}#atividades|">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+              <i class="fas fa-plus fa-3x"></i>
+              </div>             
+            </div>
+            </a>
+            <img class="img-fluid" src="img/SABADO.jpg" alt="">
+          </div>
+        </div> 
+        
+      <div class="col-md-6 col-lg-6">
+         <div class="portfolio-item mx-auto">
+            <a th:href="|@{/domingo}#atividades|">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+              <i class="fas fa-plus fa-3x"></i>
+              </div>             
+            </div>
+            </a>
+            <img class="img-fluid" src="img/DOMINGO.jpg" alt="">
+          </div>
+        </div>
+        
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/CORONA.jpg" alt="">
+          </div>
+        </div>     
+      </div>
+    </section>
+    <!-- Portfolio Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Coronavirus?</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Text -->
+              <h2 class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="arquivos/Mas-Afinal-o-que-eh-Coronavirus.pdf">
+              Mas afinal, o que é o Coronavírus?</a> </h2>
+
+               <h2 class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="arquivos/o-gatinho-que-nao-podia-passear.pdf">
+              O gatinho que não podia passear.</a> </h2>
+
+               <h2 class="mb-2 text-center"> <a class="nav-link rounded js-scroll-trigger" target="_blank" href="arquivos/nao-posso-ir-la-fora.pdf">
+             Por que eu não posso ir lá fora?</a> </h2>
+
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</html>

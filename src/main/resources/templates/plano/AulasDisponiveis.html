@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadraoSite}"
+	xmlns:plano="http://ti.guaira.pr.gov.br">
+
+<section layout:fragment="conteudo">
+
+ <section class="page-section portfolio" id="aulas">
+   	<div class="container">
+ 		<div class="row">
+	     	<nav aria-label="breadcrumb" class="col-xs-12 col-sm-12 col-md-6">
+ 				<ol class="breadcrumb nav-breadcrumb">
+    				<li class="breadcrumb-item"><a th:href="@{/}">Início</a></li>
+    				<li class="breadcrumb-item"><a th:href="|@{/semanasLiberadas/{codigoSerie}(codigoSerie=${serie})}#semanas|">Semanas</a></li>
+    				<li class="breadcrumb-item active" aria-current="page">Aulas</li>
+  				</ol>
+			</nav>
+		</div>
+	</div>
+ <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Aulas disponíveis</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="container">
+      	<div class="row">
+      		<div class="table-responsive  py-tabela-simples">
+			<table class="table  table-hover">
+				<thead>
+					<tr>
+						<th class="text-center">
+							<plano:order page="${pagina}" field="serie" text="Série"/>
+						</th>
+						<th>
+							<plano:order page="${pagina}" field="materia" text="Matéria"/>
+						</th>
+						<th class="table-hospedagem-col-acoes  text-center">Ações</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="aula : ${pagina.conteudo}">
+						<td class="text-center" style="vertical-align:middle;" th:text="${aula.serie.nome}"></td>
+						<td style="vertical-align:middle;" th:text="${aula.materia.nome}"></td>
+						<td class="text-center">
+							<a class="btn btn-primary" th:href="|@{/aula/{codigoSemana}/{codigoSerie}/{codigoAula}(codigoSemana=${semana}, codigoSerie=${serie}, codigoAula=${aula.codigo})}#aulas|"> <i
+							class="fas fa-plus"></i> <span
+							class="hidden-xs  hidden-sm">Acessar</span>
+						</a>
+						</td>
+					</tr>
+
+				<tr th:if="${pagina.vazia}">
+						<td colspan="4">Nenhuma aula encontrada</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+      	</div>
+      </div>
+</section>
+</section>
+
+</html>

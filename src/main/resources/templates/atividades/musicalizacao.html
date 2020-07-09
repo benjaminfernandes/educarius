@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadraoSite}">
+
+<section layout:fragment="conteudo">
+
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="atividades">
+  <div class="container">
+ 		<div class="row">
+	     	<nav aria-label="breadcrumb" class="col-xs-12 col-sm-12 col-md-6">
+ 				<ol class="breadcrumb nav-breadcrumb">
+    				<li class="breadcrumb-item"><a th:href="|@{/}#atividades|">Início</a></li>
+    				<li class="breadcrumb-item active" aria-current="page">Musicalização</li>
+  				</ol>
+			</nav>
+		</div>
+	</div>
+     <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Musicalização</h2>
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+    <div class="container">
+      <div class="row">
+
+    <div class="col-lg-6 mb-5 mb-lg-0">
+        <h5 class="text-uppercase mb-3 text-center">Aula 1</h5>
+        <div class="video-container">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/OVIN0NO1dXs" frameborder="0" allowfullscreen>
+      </iframe></div>
+   </div>    
+  </div>
+</div>
+  </section>
+ </section>
+</html>

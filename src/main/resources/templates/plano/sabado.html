@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadraoSite}">
+
+<section layout:fragment="conteudo">
+   
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="atividades">
+    <div class="container">
+ 		<div class="row">
+	     	<nav aria-label="breadcrumb" class="col-xs-12 col-sm-12 col-md-6">
+ 				<ol class="breadcrumb nav-breadcrumb">
+    				<li class="breadcrumb-item"><a th:href="|@{/}#atividades|">Início</a></li>
+    				<li class="breadcrumb-item"><a th:href="@{/rotinas}">Rotina</a></li>
+    				<li class="breadcrumb-item active" aria-current="page">Sábado</li>
+  				</ol>
+			</nav>
+		</div>
+	</div>
+       <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Sábado</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+    <div class="container">
+      <h2>Disciplina: Literacia Familiar</h2>
+      <h4>Manhã:</h4>
+      <p class="mb-2">• Praticar as boas maneiras (bom dia, com licença, por favor, desculpe...)</p>
+      <p class="mb-2">• Ajudar nos afazeres de casa;</p>
+      <p class="mb-2">• Arrumar os brinquedos</p>
+
+      <div class="row">
+            <div class="col-md-6 col-lg-12">
+          <div class="mx-auto">       
+            <img class="img-fluid" src="img/juntando.png" alt="">
+          </div>
+        </div>
+        </div>
+
+         <h2 style="margin-top: 20px">Organizar o quarto e materiais que serão utilizados em futuras atividades</h2>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-12">
+          <div class="mx-auto">       
+            <img class="img-fluid" src="img/limpando.png" alt="">
+          </div>
+        </div>
+        </div>
+    
+       
+      <h2 style="margin-top: 20px">Tarde:</h2>
+      <p class="mb-2">• Brincar de escolinha, casinha, carrinhos...;</p>
+      <p class="mb-2">• Educação física em família (Brincadeiras);</p>
+       
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">       
+            <img class="img-fluid" src="img/bonecas.png" alt="">
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">       
+            <img class="img-fluid" src="img/pai.png" alt="">
+          </div>
+        </div>
+
+         <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">       
+            <img class="img-fluid" src="img/familia.png" alt="">
+          </div>
+        </div>
+
+        </div>
+      
+       <h2 style="margin-top: 20px">Noite</h2>
+
+        <p class="mb-2">• Organizar e guardar objetos usados durante o dia;</p>
+        <p class="mb-2">• Ver um filme, assistir televisão e/ou ler um livro;</p>
+        <p class="mb-2">• Orar em família, cantar, dar “boa noite” aos seus familiares.</p>
+
+    </div>
+
+  </section>
+ </section>
+
+</html>
