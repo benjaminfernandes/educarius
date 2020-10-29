@@ -152,7 +152,7 @@ public class InicioController {
 	}
 	
 	@GetMapping("/aulasOnline/{codigoSerie}/{codigoSemana}")
-	public ModelAndView aulas(@PathVariable("codigoSerie") Long codigoSerie, @PathVariable("codigoSemana") Long codigoSemana, AulaFilter aulaFilter , @PageableDefault(size = 10) Pageable pageable, 
+	public ModelAndView aulas(@PathVariable("codigoSerie") Long codigoSerie, @PathVariable("codigoSemana") Long codigoSemana, AulaFilter aulaFilter , @PageableDefault(size = 15) Pageable pageable, 
 			HttpServletRequest httpServletRequest) {
 		ModelAndView mv = new ModelAndView("plano/AulasDisponiveis");
 		aulaFilter.setSerie(this.series.findById(codigoSerie).get());
