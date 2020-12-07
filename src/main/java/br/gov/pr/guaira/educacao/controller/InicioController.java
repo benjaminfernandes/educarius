@@ -89,6 +89,13 @@ public class InicioController {
 		return mv;
 	}
 	
+	@GetMapping("/saudeEscola")
+	public ModelAndView saudeEscola() {
+		ModelAndView mv = new ModelAndView("atividades/saude_escola");
+		
+		return mv;
+	}
+	
 	@GetMapping("/educacaoInfantil")
 	public ModelAndView educacaoInfantil() {
 		ModelAndView mv = new ModelAndView("atividades/educacao_infantil");
