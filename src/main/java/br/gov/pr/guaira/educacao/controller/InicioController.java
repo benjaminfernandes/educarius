@@ -145,6 +145,13 @@ public class InicioController {
 		return mv;
 	}
 	
+	@GetMapping("/encerramento-ano-letivo")
+	public ModelAndView encerramentoAnoLetivo() {
+		ModelAndView mv = new ModelAndView("atividades/encerramentoAnoLetivo");
+		
+		return mv;
+	}
+	
 	@GetMapping("/semanasLiberadas/{codigoSerie}")
 	public ModelAndView pesquisarSite(SemanaFilter semanaFilter, BindingResult binding,@PageableDefault(size = 6) Pageable pageable,
 			HttpServletRequest httpServletRequest, @PathVariable("codigoSerie") Long codigoSerie) {

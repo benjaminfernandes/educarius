@@ -21,6 +21,20 @@
 		</div>
 		<div class="container">
 			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="portfolio-item mx-auto">
+						<a th:href="|@{/encerramento-ano-letivo}#videos|">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div
+									class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+						</a> <img class="img-fluid" src="img/encerramento_ano.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"
 					th:each="serie : ${series}">
 					<div class="portfolio-item mx-auto">

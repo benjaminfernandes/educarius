@@ -40,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 			.csrf().disable()
 			.authorizeRequests()
-				.antMatchers("/","/educacaoInfantil","/saudeEscola", "/atividadesBncc", "/videos", "/inclusao", "/brincadeiras", "/rotinas", 
+				.antMatchers("/","/educacaoInfantil","/saudeEscola", "/encerramento-ano-letivo", "/atividadesBncc", "/videos", "/inclusao", "/brincadeiras", "/rotinas", 
 						"/segunda", "/terca", "/quarta", "/quinta", "/sexta", "/sabado", "/domingo","/musicalizacao","/semanasLiberadas/*", 
 						"/aulasOnline/*/*", "/aula/*/*/*").permitAll()
 				.antMatchers("/materias/*").hasRole("CADASTRAR_MATERIA")
